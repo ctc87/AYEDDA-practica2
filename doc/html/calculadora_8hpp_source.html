@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Práctica 2 AYEDDA: Fichero Fuente /home/troyano/workspace/practicaAYEDDA2/src/calculadora/calculadora.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Práctica 2 AYEDDA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Amigas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_75ed6fa492e691662d2c7291c5b28284.html">workspace</a></li><li class="navelem"><a class="el" href="dir_14a48671ea457be588ec5b86a8beb523.html">practicaAYEDDA2</a></li><li class="navelem"><a class="el" href="dir_dbdc5becb3cf83ea359afe7d53b1e97f.html">src</a></li><li class="navelem"><a class="el" href="dir_a91c1ee21b75e1e68fd4c04ef3bb656f.html">calculadora</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">calculadora.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;../pila/pila.hpp&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../entero/Entero.hpp&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;../complejo/Complejo.hpp&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../real/Real.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;istream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_calculadora.html">   39</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_calculadora.html">Calculadora</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">string</span> nombreFicheroEntrada;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="classpila.html">pila&lt;tipoDato&gt;</a> pilaCalucladora;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    tipoDato leerDeLaEntradaHastaObtenerResultado();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    tipoDato operar(<span class="keywordtype">char</span> operador);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> establecerElTipoDeNumero(<span class="keywordtype">string</span> numero);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    vector&lt;string&gt; split(<span class="keywordtype">string</span> &amp;s, <span class="keyword">const</span> <span class="keywordtype">char</span> delim);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">bool</span> esNumero(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">bool</span> esReal(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">bool</span> esComplejo(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="class_calculadora.html#affb65320156ec6f02e20125d0354e874">Calculadora</a>(<span class="keywordtype">string</span> archivoDeEntrada);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_calculadora.html#a413420aa6043652ac4a6c92a2f8fbc52">setPilaCalucladora</a>(<span class="keyword">const</span> <a class="code" href="classpila.html">pila&lt;tipoDato&gt;</a>&amp; pilaCalucladora);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">const</span> <a class="code" href="classpila.html">pila&lt;tipoDato&gt;</a>&amp; <a class="code" href="class_calculadora.html#af0168562920b5b5e9444fb12fb91ca95">getPilaCalucladora</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_calculadora.html#a0d4a0b06492ca08aa561bce1a7ad88ce">setNombreFicheroEntrada</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; nombreFicheroEntrada);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">string</span>&amp; <a class="code" href="class_calculadora.html#ae89fee7368b4214f30aa464b9a38d29d">getNombreFicheroEntrada</a>();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="class_calculadora.html#a6ff26978b0039b948cf5cdb3a0ffd87c">~Calculadora</a>();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;};</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="class_calculadora.html#affb65320156ec6f02e20125d0354e874">  142</a></span>&#160;  <a class="code" href="class_calculadora.html#affb65320156ec6f02e20125d0354e874">Calculadora&lt;tipoDato&gt;::Calculadora</a>(<span class="keywordtype">string</span> ficheroEntrada):</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    pilaCalucladora(),</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    nombreFicheroEntrada(ficheroEntrada)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="classpila.html">pila&lt;tipoDato&gt;</a> pilaAux;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="class_calculadora.html#a413420aa6043652ac4a6c92a2f8fbc52">setPilaCalucladora</a>(pilaAux);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        leerDeLaEntradaHastaObtenerResultado();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;tipoDato <a class="code" href="class_calculadora.html">Calculadora&lt;tipoDato&gt;::operar</a>(<span class="keywordtype">char</span> operador) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  tipoDato op1;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  tipoDato op2;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  tipoDato res;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  op1 = pilaCalucladora.pop();</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  op2 = pilaCalucladora.pop();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  cout &lt;&lt; <span class="stringliteral">&quot;operación:  &quot;</span> &lt;&lt;  op2 &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; operador &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; op1 &lt;&lt; endl;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordflow">switch</span>(operador) {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordflow">case</span> <span class="charliteral">&#39;+&#39;</span>:</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    res = op2 + op1;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordflow">case</span> <span class="charliteral">&#39;*&#39;</span>:</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    res = op2 * op1;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">case</span> <span class="charliteral">&#39;/&#39;</span>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    res = op2 / op1;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordflow">case</span> <span class="charliteral">&#39;-&#39;</span>:</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    res = op2 - op1;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  cout &lt;&lt; <span class="stringliteral">&quot;Resultado &quot;</span> &lt;&lt; res &lt;&lt; endl;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordflow">return</span> res;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_calculadora.html">Calculadora&lt;tipoDato&gt;::establecerElTipoDeNumero</a>(<span class="keywordtype">string</span> numero) {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">if</span>(esComplejo(numero)) {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <a class="code" href="class_complejo.html">Complejo</a> aux(numero);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        pilaCalucladora.push(aux);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (esReal(numero)) {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="class_real.html">Real</a> aux(numero);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        pilaCalucladora.push(aux);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(esNumero(numero)) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="class_entero.html">Entero</a> aux(numero);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        pilaCalucladora.push(aux);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  tipoDato <a class="code" href="class_calculadora.html">Calculadora&lt;tipoDato&gt;::leerDeLaEntradaHastaObtenerResultado</a>() {</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    tipoDato resultado;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    ifstream in(getNombreFicheroEntrada().c_str());</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    streambuf *cinbuf = cin.rdbuf(); <span class="comment">//save old buf</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    cin.rdbuf(in.rdbuf()); <span class="comment">//redirect std::cin to in.txt!</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keywordtype">string</span> operando;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">int</span> c = (cin &gt;&gt;  ws).peek();</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordtype">string</span> oper;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">bool</span> operadorResta = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordflow">while</span>(c!= EOF) {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      <span class="keywordflow">while</span>(((c != <span class="charliteral">&#39;*&#39;</span>) &amp;&amp; (c != <span class="charliteral">&#39;/&#39;</span>) &amp;&amp; (c != <span class="charliteral">&#39;+&#39;</span>)) &amp;&amp; !operadorResta) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;          cin &gt;&gt; operando;           <span class="comment">//input from the file in.txt</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span>(c != <span class="charliteral">&#39;-&#39;</span>) {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            establecerElTipoDeNumero(operando);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            c = (cin &gt;&gt;  ws).peek();</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!(esNumero(operando) || esComplejo(operando) || esReal(operando))){</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            operadorResta = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>((esNumero(operando) || esComplejo(operando) || esReal(operando))){</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            establecerElTipoDeNumero(operando);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keywordflow">if</span>(!operadorResta) {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;          cin &gt;&gt; oper;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;          oper = operando;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;          operadorResta = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      resultado = operar(oper.c_str()[0]);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      establecerElTipoDeNumero(resultado.to_string());</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      c = (cin &gt;&gt;  ws).peek();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    cin.rdbuf(cinbuf);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keywordflow">return</span> resultado;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_calculadora.html">Calculadora&lt;tipoDato&gt;::esNumero</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s) {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">return</span> ( ((s[0] == <span class="charliteral">&#39;-&#39;</span>) &amp;&amp; isdigit(s[1])) || isdigit(s[0]) );</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_calculadora.html">Calculadora&lt;tipoDato&gt;::esComplejo</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s) {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">size_t</span> found = s.find(<span class="stringliteral">&quot;i&quot;</span>);</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">return</span> esNumero(s) &amp;&amp; (found != string::npos);</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_calculadora.html">Calculadora&lt;tipoDato&gt;::esReal</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; s) {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordtype">size_t</span> found1 = s.find(<span class="stringliteral">&quot;.&quot;</span>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">size_t</span> found2 = s.find(<span class="stringliteral">&quot;E&quot;</span>);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">size_t</span> found3 = s.find(<span class="stringliteral">&quot;e&quot;</span>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordflow">return</span> esNumero(s) &amp;&amp; ((found1 != string::npos) || (found2 != string::npos) || (found3 != string::npos));</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;}</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="class_calculadora.html#a413420aa6043652ac4a6c92a2f8fbc52">  251</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_calculadora.html#a413420aa6043652ac4a6c92a2f8fbc52">Calculadora&lt;tipoDato&gt;::setPilaCalucladora</a>(<span class="keyword">const</span> <a class="code" href="classpila.html">pila&lt;tipoDato&gt;</a>&amp; pilaCalucladora) {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    this-&gt;pilaCalucladora = pilaCalucladora;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="class_calculadora.html#af0168562920b5b5e9444fb12fb91ca95">  256</a></span>&#160;<span class="keyword">const</span> <a class="code" href="classpila.html">pila&lt;tipoDato&gt;</a>&amp; <a class="code" href="class_calculadora.html#af0168562920b5b5e9444fb12fb91ca95">Calculadora&lt;tipoDato&gt;::getPilaCalucladora</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">return</span> pilaCalucladora;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="class_calculadora.html#ae89fee7368b4214f30aa464b9a38d29d">  262</a></span>&#160;<span class="keywordtype">string</span>&amp; <a class="code" href="class_calculadora.html#ae89fee7368b4214f30aa464b9a38d29d">Calculadora&lt;tipoDato&gt;::getNombreFicheroEntrada</a>() {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">return</span> nombreFicheroEntrada;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="class_calculadora.html#a0d4a0b06492ca08aa561bce1a7ad88ce">  267</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_calculadora.html#a0d4a0b06492ca08aa561bce1a7ad88ce">Calculadora&lt;tipoDato&gt;::setNombreFicheroEntrada</a>(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; nombreFicheroEntrada) {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    this-&gt;nombreFicheroEntrada = nombreFicheroEntrada;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> tipoDato&gt;</div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="class_calculadora.html#a6ff26978b0039b948cf5cdb3a0ffd87c">  272</a></span>&#160;  <a class="code" href="class_calculadora.html#a6ff26978b0039b948cf5cdb3a0ffd87c">Calculadora&lt;tipoDato&gt;::~Calculadora</a>(){}</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="ttc" id="class_calculadora_html"><div class="ttname"><a href="class_calculadora.html">Calculadora</a></div><div class="ttdef"><b>Definition:</b> <a href="calculadora_8hpp_source.html#l00039">calculadora.hpp:39</a></div></div>
+<div class="ttc" id="class_calculadora_html_ae89fee7368b4214f30aa464b9a38d29d"><div class="ttname"><a href="class_calculadora.html#ae89fee7368b4214f30aa464b9a38d29d">Calculadora::getNombreFicheroEntrada</a></div><div class="ttdeci">string &amp; getNombreFicheroEntrada()</div><div class="ttdoc">Getter de la ruta del fichero. </div><div class="ttdef"><b>Definition:</b> <a href="calculadora_8hpp_source.html#l00262">calculadora.hpp:262</a></div></div>
+<div class="ttc" id="classpila_html"><div class="ttname"><a href="classpila.html">pila</a></div><div class="ttdef"><b>Definition:</b> <a href="pila_8hpp_source.html#l00026">pila.hpp:26</a></div></div>
+<div class="ttc" id="class_calculadora_html_affb65320156ec6f02e20125d0354e874"><div class="ttname"><a href="class_calculadora.html#affb65320156ec6f02e20125d0354e874">Calculadora::Calculadora</a></div><div class="ttdeci">Calculadora(string archivoDeEntrada)</div><div class="ttdoc">Constructor con cadena. </div><div class="ttdef"><b>Definition:</b> <a href="calculadora_8hpp_source.html#l00142">calculadora.hpp:142</a></div></div>
+<div class="ttc" id="class_real_html"><div class="ttname"><a href="class_real.html">Real</a></div><div class="ttdef"><b>Definition:</b> <a href="_real_8hpp_source.html#l00014">Real.hpp:14</a></div></div>
+<div class="ttc" id="class_calculadora_html_a0d4a0b06492ca08aa561bce1a7ad88ce"><div class="ttname"><a href="class_calculadora.html#a0d4a0b06492ca08aa561bce1a7ad88ce">Calculadora::setNombreFicheroEntrada</a></div><div class="ttdeci">void setNombreFicheroEntrada(const string &amp;nombreFicheroEntrada)</div><div class="ttdoc">Setter de la ruta del fichero. </div><div class="ttdef"><b>Definition:</b> <a href="calculadora_8hpp_source.html#l00267">calculadora.hpp:267</a></div></div>
+<div class="ttc" id="class_entero_html"><div class="ttname"><a href="class_entero.html">Entero</a></div><div class="ttdef"><b>Definition:</b> <a href="_entero_8hpp_source.html#l00020">Entero.hpp:20</a></div></div>
+<div class="ttc" id="class_complejo_html"><div class="ttname"><a href="class_complejo.html">Complejo</a></div><div class="ttdef"><b>Definition:</b> <a href="_complejo_8hpp_source.html#l00014">Complejo.hpp:14</a></div></div>
+<div class="ttc" id="class_calculadora_html_a6ff26978b0039b948cf5cdb3a0ffd87c"><div class="ttname"><a href="class_calculadora.html#a6ff26978b0039b948cf5cdb3a0ffd87c">Calculadora::~Calculadora</a></div><div class="ttdeci">~Calculadora()</div><div class="ttdoc">Destructor de la clase. </div><div class="ttdef"><b>Definition:</b> <a href="calculadora_8hpp_source.html#l00272">calculadora.hpp:272</a></div></div>
+<div class="ttc" id="class_calculadora_html_af0168562920b5b5e9444fb12fb91ca95"><div class="ttname"><a href="class_calculadora.html#af0168562920b5b5e9444fb12fb91ca95">Calculadora::getPilaCalucladora</a></div><div class="ttdeci">const pila&lt; tipoDato &gt; &amp; getPilaCalucladora() const </div><div class="ttdoc">Getter de la pila. </div><div class="ttdef"><b>Definition:</b> <a href="calculadora_8hpp_source.html#l00256">calculadora.hpp:256</a></div></div>
+<div class="ttc" id="class_calculadora_html_a413420aa6043652ac4a6c92a2f8fbc52"><div class="ttname"><a href="class_calculadora.html#a413420aa6043652ac4a6c92a2f8fbc52">Calculadora::setPilaCalucladora</a></div><div class="ttdeci">void setPilaCalucladora(const pila&lt; tipoDato &gt; &amp;pilaCalucladora)</div><div class="ttdoc">Setter de la pila. </div><div class="ttdef"><b>Definition:</b> <a href="calculadora_8hpp_source.html#l00251">calculadora.hpp:251</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Martes, 8 de Marzo de 2016 20:16:29 para Práctica 2 AYEDDA por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>
